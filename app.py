@@ -3,10 +3,11 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 from datetime import datetime, date
+from ml_signal import is_model_ready, predict_signal, make_sig_details
 import warnings
 warnings.filterwarnings("ignore")
 
-st.set_page_config(page_title="AInvest", page_icon="📈",
+st.set_page_config(page_title="DLyz", page_icon="📈",
                    layout="wide", initial_sidebar_state="collapsed")
 
 st.markdown("""
@@ -257,9 +258,9 @@ def render_swing_card(key, score, prob, sigs, ticker):
 # ── Header ────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style="text-align:center;padding:24px 0 8px;">
-  <div style="font-size:28px;font-weight:900;letter-spacing:1px;">📈 AInvest</div>
-  <div style="font-size:13px;color:#555;margin-top:4px;">For STOCK </div>
-  <div style="font-size:13px;color:#555;margin-top:4px;">Swing Trading </div>
+  <div style="font-size:28px;font-weight:900;letter-spacing:1px;"> DLyz</div>
+  <div style="font-size:13px;color:#555;margin-top:4px;"> Deep Learning for Analyzing </div>
+  <div style="font-size:13px;color:#555;margin-top:4px;">Swing Trading for Stock</div>
 </div>""", unsafe_allow_html=True)
 
 # ── Input ─────────────────────────────────────────────────────────────────────
